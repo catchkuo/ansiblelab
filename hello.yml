@@ -1,5 +1,6 @@
 - name: Hello World Sample
   hosts: database_servers
+  connection: ssh
   tasks:
     - name: Hello Message
       debug: var=ansible_all_ipv4_addresses
