@@ -4,6 +4,6 @@
   gather_facts: yes
   tasks:
     - name: get ip
-      debug: var=ansible_default_ipv4.address
+      debug: var=hostvars[inventory_hostname]['ansible_default_ipv4']['address']
       
         
