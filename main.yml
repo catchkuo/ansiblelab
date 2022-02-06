@@ -1,5 +1,5 @@
 ---
-- name: Deploy, configure, and populate Postgres 10
+- name: Deploy, configure, and populate Postgres 12
   hosts: database_servers
   become: true
   gather_facts: false
@@ -138,7 +138,7 @@
 
     pip_dependencies:
       - virtualenv
-      - psycopg2-binary==2.8.6
+      - psycopg2-binary==2.9.3
 
   tasks:
 
