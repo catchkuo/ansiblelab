@@ -13,9 +13,9 @@ app2.example.com ansible_host=192.168.51.13
 appdb1.example.com ansible_host=192.168.51.17
 
 [internal:children]
+
 load_balancers
 app_servers
 database_servers
 
-[all:vars]
-GUID="{{ lookup('env', 'GUID') }}"
+
