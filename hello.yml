@@ -1,8 +1,8 @@
-- name: Hello World Sample
+- name: get ip
   hosts: database_servers
   connection: ssh
   tasks:
-    - name: Hello Message
-      debug: var=ansible_all_ipv4_addresses
+    - name: get ip
+      debug: var=hostvars[inventory_hostname]['ansible_env'].SSH_CONNECTION.split(' ')[2]
       
         
