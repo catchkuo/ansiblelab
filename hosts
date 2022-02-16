@@ -1,16 +1,16 @@
 [load_balancers]
 
-frontend1.example.com ansible_host=192.168.51.20
+frontend1.example.com ansible_host=192.168.51.20  ansible_connection=ssh ansible_user=devops
 
 
 [app_servers]
 
-app1.example.com ansible_host=192.168.51.15
-app2.example.com ansible_host=192.168.51.13
+app1.example.com ansible_host=192.168.51.15  ansible_connection=ssh ansible_user=devops
+app2.example.com ansible_host=192.168.51.13  ansible_connection=ssh ansible_user=devops
 
 [database_servers]
 
-appdb1.example.com ansible_host=192.168.51.17
+appdb1.example.com ansible_host=192.168.51.17 ansible_connection=ssh ansible_user=devops
 
 [internal:children]
 
