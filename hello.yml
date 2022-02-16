@@ -2,6 +2,7 @@
   hosts: database_servers
   connection: ssh
   gather_facts: yes
+  ansible_user: devops
   tasks:
     - name: get ip
       debug: var=hostvars[inventory_hostname]['ansible_default_ipv4']['address']
