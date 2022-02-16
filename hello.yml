@@ -1,5 +1,5 @@
 - name: get ip
-  hosts: allapp
+  hosts: load_balancers
   gather_facts: yes
   tasks:
     - name: get ip
