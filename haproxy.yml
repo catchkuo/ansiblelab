@@ -1,0 +1,12 @@
+---
+- name: Deploy haproxy load balancer
+  hosts: load_balancers
+  gather_facts: false 
+  tags:
+    - load_balancers
+  become: true
+  roles:
+    - role: flask
+      vars:
+        load_balancer_packages:
+        - haproxy
