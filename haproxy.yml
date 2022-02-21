@@ -6,7 +6,7 @@
     - load_balancers
   become: true
   roles:
-    - role: flask
+    - role: haproxy
       vars:
         load_balancer_packages:
         - haproxy
